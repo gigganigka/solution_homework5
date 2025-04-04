@@ -1,0 +1,22 @@
+ Flyweight Pattern – Map Marker Rendering
+🗺 Scenario
+A map application displays thousands of location markers (e.g., gas stations, restaurants, hospitals).
+Each marker has unique coordinates, but many markers share the same visual style (icon, color, font).
+
+🛠 Problem Solved
+Storing style data for every marker would waste a significant amount of memory.
+Flyweight helps by sharing common style objects, reducing memory usage and improving performance when rendering many markers.
+
+✅ How Flyweight Simplified the Design
+Created shared style objects (MarkerStyle), which can be reused by multiple markers instead of creating a new object for each marker.
+
+Used a flyweight factory (MarkerFactory) to manage the creation and reuse of style objects.
+
+Each MapMarker only stores coordinates and a reference to a shared MarkerStyle object, optimizing memory usage.
+
+💡 Outcome
+The application now uses significantly less memory, even with thousands of markers.
+
+Only a small number of unique styles are created, despite a large number of markers being rendered.
+
+Performance is improved, and marker rendering is faster, with less memory consumed for identical marker styles.
